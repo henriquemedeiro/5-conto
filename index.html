@@ -6,26 +6,36 @@
     <title>5 conto</title>
     <style>
         body {
+            background-color: chartreuse;
+        }
+
+        header h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.7em;
+            background-color: chartreuse;
+            text-align: center;
+            border: 2px dashed crimson;
+            padding: 5px 3px 5px 3px;
+        }
+
+        #container {
+            position: relative;
+            padding: 10px;
             height: 95vh;
-            background-color: aquamarine;
-        }
-        
-        main {
-            background-color: blue;
-            max-width: 400px;
-            margin: auto;
-            background-position: center center;
-            background-size: cover;
+            background-image: linear-gradient(to bottom, blue, darkblue);
         }
 
-        header > h1 {
-            color: black;
-        }
+        #imagem {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            background-color: black;
+            border: 5px solid black;
 
-        img {
-            max-width: 350px;
-            background-size: cover;
-            border: 3px dashed orangered;
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);  
         }
     </style>
 </head>
@@ -33,8 +43,8 @@
     <header>
         <h1>Escaneie o código para enviar 5 reais</h1>
     </header>
-    <main>
-        <img src="imagens/qrcode.jpeg" alt="QRcode">
+    <main id="container">
+        <img id="imagem" src="imagens/qrcode.jpeg" alt="QRcode">
     </main>
 </body>
 </html>
